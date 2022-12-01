@@ -1,0 +1,62 @@
+<script  type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="sprawdz-termin.component.ts"></script> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sprawdz-termin.component.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="rejestracja">
+        <div class='fieldset'>
+          <legend>Sprawdź wolne terminy</legend>
+          <form action=showDatesByDoctors>
+            <div class='row'>
+              <label for='IDLekarza'>Lekarz</label>
+              <select name="doctors">
+                <option *ngFor="let doctor of doctors" [value]="doctors">
+                    {{doctor.name +" " +doctor.surname}}</option>
+              </select>
+            </div>
+            <input type="submit" value="Sprawdź">
+            <table name="datesByDoctor">
+                <tr *ngFor="let date of dates">
+                    {{date}}</tr>
+            </table>
+          </form>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="sidebar">
+            <div class="profile">
+                <h3>System rejestracji pacjentów</h3>
+            </div>
+
+            <ul>
+                <li>
+                    <a routerLink="/rejestracja" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <span class="item">Zarejestruj wizytę</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/odwolanie" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <span class="item">Odwołaj wizytę</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/terminy" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <span class="item">Sprawdź dostępność terminów</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+    "doctorURL": "api/lekarze",
+    "adressURL": "api/adresy",
+    "registrationURL": "api/rejestracje",
+    "visitDateURL": "api/terminy"
+}

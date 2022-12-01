@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="odwolanie.component.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="odwolanie-wizyty">
+        <div class='fieldset'>
+          <legend>Odwołanie zaplanowanej wizyty</legend>
+          <form action=#>
+            <div class='row'>
+              <label for='IDRejestracja'>ID rejestracji</label>
+              <input type="text" placeholder="ID rejestracji" name='IDRejestracja' id='IDRejestracja' data-required="true">
+            </div>
+            <div class='row'>
+              <label for="Pesel">Numer PESEL</label>
+              <input type="text" placeholder="Numer PESEL"  name='Pesel' data-required="true" data-type="text">
+            </div>
+            <div class='row'>
+              <label for="Imie">Imię</label>
+              <input type="text" placeholder="Imię"  name='Imie' data-required="true" data-type="text">
+            </div>
+            <div class='row'>
+              <label for="Nazwisko">Nazwisko</label>
+              <input type="text" placeholder="Nazwisko"  name='Nazwisko' data-required="true" data-type="text">
+            </div>
+            <input type="submit" name="odwolanie" value="Odwołaj">
+          </form>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="sidebar">
+            <div class="profile">
+                <h3>System rejestracji pacjentów</h3>
+            </div>
+
+            <ul>
+                <li>
+                    <a routerLink="/rejestracja" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <span class="item">Zarejestruj wizytę</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/odwolanie" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <span class="item">Odwołaj wizytę</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/terminy" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <span class="item">Sprawdź dostępność terminów</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+</body>
+</html>
